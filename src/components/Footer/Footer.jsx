@@ -39,8 +39,8 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-400">
           <p className="font-regular text-[17px] leading-[25px] text-[#555555] max-xxsm:text-center">
-            &copy; {new Date().getFullYear()} © 2025 Muhammad LutafUllah. All
-            rights reserved.
+            &copy; {new Date().getFullYear()} Muhammad LutafUllah. All rights
+            reserved.
           </p>
           {/* Social Icons */}
           {/* <div className="flex gap-4 mt-4 md:mt-0">
