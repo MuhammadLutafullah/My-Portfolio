@@ -73,7 +73,7 @@ const Resume = () => {
                     },
                     {
                       title: "Frontend-React Developer at Technupur",
-                      duration: "2022 - 2025",
+                      duration: "2023 - 2025",
                       text: "At Technupur, I developed engaging user interfaces using React and Next.js, focusing on UI logic and architecture to enhance the user experience. My role included API integration and implementing features like user and admin dashboards. I delivered efficient, scalable solutions aligned with project goals.",
                     },
                   ].map((item, index) => (

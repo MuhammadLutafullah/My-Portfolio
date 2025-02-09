@@ -30,10 +30,14 @@ const Hero = () => {
               adaptability and exceptional performance across all devices.
             </p>
             <div className="action-otr flex max-sm:justify-center">
-              <div className="action-inr h-[50px] overflow-hidden  cursor-pointer text-[18px] max-xxsm:text-[15px] font-medium font-normal leading-[30px] text-white py-[10px] px-[24px] rounded-[8px] bg-slate-950">
+              <a
+                href="https://drive.google.com/file/d/17NJXrsdQkh-PNSklvqzO1NYjVWEDZZ8O/view?usp=sharing"
+                target="_blank"
+                className="action-inr h-[50px] overflow-hidden  cursor-pointer text-[18px] max-xxsm:text-[15px] font-medium font-normal leading-[30px] text-white py-[10px] px-[24px] rounded-[8px] bg-slate-950"
+              >
                 <p className="btn-default-txt">Download CV</p>
                 <p className="pt-[11px] btn-hover-txt">One Click Away</p>
-              </div>
+              </a>
             </div>
           </div>
           <Tilt

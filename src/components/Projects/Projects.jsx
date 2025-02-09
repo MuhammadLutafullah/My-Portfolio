@@ -4,6 +4,7 @@ import "./Projects.css";
 import mursImg from "../../images/murs-preview-img.webp";
 import ethixImg from "../../images/ethix-preview-img.webp";
 import rageImg from "../../images/rage-preview-img.webp";
+import comingSoon from "../../images/Coming-soon.jpg";
 const Projects = () => {
   const projects = [
     {
@@ -23,12 +24,20 @@ const Projects = () => {
       liveLink: "https://ethix-nftmarketplace.surge.sh/theme/index.html",
     },
     {
-      id: 2,
+      id: 3,
       title: "RAGE – Gaming Project",
       description:
         "Rage is a live-stream platform for gamers to watch streams and track player rankings. It offers real-time updates for an immersive gaming experience.",
       imgSrc: rageImg,
       liveLink: "https://livestream-gamingwebsite.surge.sh/theme/index.html",
+    },
+    {
+      id: 4,
+      title: "Gamming Charecter",
+      description:
+        "Gamming Character is a React-based platform where users sell gaming artwork via a user dashboard, while an admin dashboard monitors activities.",
+      imgSrc: comingSoon,
+      liveLink: "https://gamming-charecter.vercel.app/",
     },
     // Add more project objects as needed
   ];

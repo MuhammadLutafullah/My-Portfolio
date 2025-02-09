@@ -3,7 +3,7 @@ import "./Slider360.css";
 import mursImg from "../../images/murs-preview-img.webp";
 import ethixImg from "../../images/ethix-preview-img.webp";
 import rageImg from "../../images/rage-preview-img.webp";
-
+import comingSoon from "../../images/Coming-soon.jpg";
 const Slider360 = () => {
   const slides = [
     {
@@ -27,38 +27,29 @@ const Slider360 = () => {
     },
     {
       id: 4,
-      image:
-        "https://images.unsplash.com/photo-1737142928495-ca54258b1e81?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1Nnx8fGVufDB8fHx8fA%3D%3D",
+      image: comingSoon,
       // title: "Beautiful Landscape 4",
-      url: "https://example.com/slide4",
+      url: "",
     },
     {
       id: 5,
-      image:
-        "https://images.unsplash.com/photo-1737110527696-512b410341bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4MHx8fGVufDB8fHx8fA%3D%3D",
-      // title: "Beautiful Landscape 5",
-      url: "https://example.com/slide5",
+      image: comingSoon,
+      url: "",
     },
     {
       id: 6,
-      image:
-        "https://plus.unsplash.com/premium_photo-1690522330973-021425184c2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMDl8fHxlbnwwfHx8fHw%3D",
-      // title: "Beautiful Landscape 6",
-      url: "https://example.com/slide6",
+      image: comingSoon,
+      url: "",
     },
     {
       id: 7,
-      image:
-        "https://images.unsplash.com/photo-1736943993909-34e556d9a7c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMTl8fHxlbnwwfHx8fHw%3D",
-      // title: "Beautiful Landscape 7",
-      url: "https://example.com/slide7",
+      image: comingSoon,
+      url: "",
     },
     {
       id: 8,
-      image:
-        "https://plus.unsplash.com/premium_photo-1736798695947-2c7661f72bc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNTZ8fHxlbnwwfHx8fHw%3D",
-      // title: "Beautiful Landscape 8",
-      url: "https://example.com/slide8",
+      image: comingSoon,
+      url: "",
     },
   ];
 
@@ -109,7 +100,7 @@ const Slider360 = () => {
                   <a href={slide.url} target="_blank" rel="noopener noreferrer">
                     <img
                       src={slide.image}
-                      className="rounded-[11px]"
+                      className="rounded-[11px] border border-[#e5e5e5]"
                       alt={slide.title}
                     />
                     <h3 className="slide-title flex justify-center pt-[7px]">
