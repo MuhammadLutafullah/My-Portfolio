@@ -3,7 +3,11 @@ import "./Slider360.css";
 import mursImg from "../../images/murs-preview-img.webp";
 import ethixImg from "../../images/ethix-preview-img.webp";
 import rageImg from "../../images/rage-preview-img.webp";
-import comingSoon from "../../images/Coming-soon.jpg";
+import img1 from "../../images/1.png";
+import img2 from "../../images/4.png";
+import img3 from "../../images/5.png";
+import img4 from "../../images/6.png";
+import img5 from "../../images/7.png";
 const Slider360 = () => {
   const slides = [
     {
@@ -27,29 +31,29 @@ const Slider360 = () => {
     },
     {
       id: 4,
-      image: comingSoon,
+      image: img1,
       // title: "Beautiful Landscape 4",
-      url: "",
+      url: "https://i2p2.frieslandcampina.com.pk/",
     },
     {
       id: 5,
-      image: comingSoon,
-      url: "",
+      image: img2,
+      url: "https://500.land/",
     },
     {
       id: 6,
-      image: comingSoon,
-      url: "",
+      image: img3,
+      url: "https://beta.invoicemate.net/auth/jwt/login?returnTo=%2Fdashboard",
     },
     {
       id: 7,
-      image: comingSoon,
-      url: "",
+      image: img4,
+      url: "https://www.skyygo.com/development",
     },
     {
       id: 8,
-      image: comingSoon,
-      url: "",
+      image: img5,
+      url: "https://gamming-charecter.vercel.app/",
     },
   ];
 
