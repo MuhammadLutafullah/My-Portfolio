@@ -53,9 +53,9 @@ const Hero = () => {
             glarePosition="bottom"
             gyroscope={true}
           >
-            <div className="hero-img bg-[#555555] rounded-full overflow-hidden w-[550px] h-[550px] max-md:w-[421px] max-md:h-[421px] max-sm:!w-[200px] max-sm:!h-[200px] flex justify-center items-center">
+            <div className="hero-img bg-black rounded-full overflow-hidden w-[550px] h-[550px] max-md:w-[421px] max-md:h-[421px] max-sm:!w-[200px] max-sm:!h-[200px] flex justify-center items-center">
               <img
-                className="max-md:w-full max-md:h-full max-md:object-contain"
+                className="max-md:w-full max-md:h-full object-contain w-[500px]  h-[500px]"
                 src={heroImg}
                 alt="dev-img"
               />
