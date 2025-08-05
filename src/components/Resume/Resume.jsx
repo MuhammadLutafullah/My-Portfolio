@@ -68,12 +68,12 @@ const Resume = () => {
                     },
                     {
                       title: "Frontend Developer at Vistothemes",
-                      duration: "2019 - 2022",
+                      duration: "2022 - 2024",
                       text: "At Vistothemes, my role was to deliver pixel-perfect designs tailored for mobile and tablet, crafting intricate layouts that seamlessly optimized user interactions. I focused on ensuring cross-platform compatibility while maintaining visual consistency across devices, contributing to smooth and engaging user experiences.",
                     },
                     {
                       title: "Frontend-React Developer at Technupur",
-                      duration: "2023 - 2025",
+                      duration: "2024 - 2025",
                       text: "At Technupur, I developed engaging user interfaces using React and Next.js, focusing on UI logic and architecture to enhance the user experience. My role included API integration and implementing features like user and admin dashboards. I delivered efficient, scalable solutions aligned with project goals.",
                     },
                   ].map((item, index) => (
