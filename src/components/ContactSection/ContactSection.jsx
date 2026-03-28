@@ -11,21 +11,9 @@ const ContactSection = () => {
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState({ type: '', message: '' });
 
-  // Determine API URL based on environment
-  // For Vite (if using Vite)
-  const API_URL = import.meta.env?.DEV 
-    ? 'http://localhost:5000/api/contact'
-    : '/api/contact';
-  
-  // For Create React App (uncomment if using CRA, comment the above)
-  // const API_URL = process.env.NODE_ENV === 'production' 
-  //   ? '/api/contact'
-  //   : 'http://localhost:5000/api/contact';
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    // Clear status when user starts typing
     setStatus({ type: '', message: '' });
   };
 
@@ -35,7 +23,7 @@ const ContactSection = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch('http://localhost:5000/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,9 +47,8 @@ const ContactSection = () => {
       }
     } catch (error) {
       console.error('Error:', error);
-      // Better error message for connection issues
       if (error.message === 'Failed to fetch') {
-        setStatus({ type: 'error', message: 'Cannot connect to server. Please try again later.' });
+        setStatus({ type: 'error', message: 'Cannot connect to server. Please make sure the API is running on port 5000.' });
       } else {
         setStatus({ type: 'error', message: error.message || 'Failed to send message. Please try again later.' });
       }
@@ -84,7 +71,6 @@ const ContactSection = () => {
             </p>
           </div>
           
-          {/* Status Message */}
           {status.message && (
             <div className={`mb-4 p-3 rounded ${
               status.type === 'success' ? 'bg-green-500' : 'bg-red-500'
@@ -94,7 +80,6 @@ const ContactSection = () => {
           )}
           
           <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-[770px] mx-auto">
-            {/* First row: First Name, Last Name */}
             <div className="flex max-sm:flex-col flex-row gap-4 justify-center items-center">
               <input
                 type="text"
@@ -116,7 +101,6 @@ const ContactSection = () => {
               />
             </div>
 
-            {/* Second row: Email, Phone */}
             <div className="flex max-sm:flex-col flex-row gap-4 justify-center items-center">
               <input
                 type="email"
@@ -137,7 +121,6 @@ const ContactSection = () => {
               />
             </div>
 
-            {/* Third row: Message */}
             <div className="flex max-sm:flex-col flex-row gap-4 justify-center items-center">
               <textarea
                 name="message"
@@ -150,16 +133,13 @@ const ContactSection = () => {
               />
             </div>
 
-            {/* Fourth row: Submit Button */}
             <div className="flex justify-center mt-2">
               <button
                 type="submit"
                 disabled={isSending}
-                className="w-full max-w-[250px] cursor-pointer rounded-[8px] bg-transparent border border-[#ffffff] text-white font-medium text-[18px] leading-[30px] px-[24px] py-[10px] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:bg-white hover:text-black"
+                className="w-full max-w-[250px] cursor-pointer rounded-[8px] bg-transparent border border-[#ffffff] text-white font-medium text-[18px] leading-[30px] px-[24px] py-[10px] disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <p className="btn-default-txt">
-                  {isSending ? "Sending..." : "Send"}
-                </p>
+                {isSending ? "Sending..." : "Send"}
               </button>
             </div>
           </form>

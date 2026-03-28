@@ -1,25 +1,19 @@
 # Dependencies
 node_modules/
-venv/
-server/venv/
-.env
-.env.local
 
 # Build
 dist/
 build/
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
+# Server files (local API)
+server/venv/
+server/__pycache__/
+server/.env
+.env
 
 # IDE
 .vscode/
 .idea/
-*.swp
 
 # OS
 .DS_Store
