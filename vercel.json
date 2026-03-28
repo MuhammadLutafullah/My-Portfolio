@@ -1,10 +1,9 @@
 {
-  "builds": [
-    {
-      "src": "api/contact.py",
-      "use": "@vercel/python"
+  "functions": {
+    "api/contact.py": {
+      "runtime": "@vercel/python@3.9.0"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/(.*)",
