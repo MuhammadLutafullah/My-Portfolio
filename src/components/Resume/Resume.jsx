@@ -76,6 +76,11 @@ const Resume = () => {
                       duration: "2024 - 2025",
                       text: "At Technupur, I developed engaging user interfaces using React and Next.js, focusing on UI logic and architecture to enhance the user experience. My role included API integration and implementing features like user and admin dashboards. I delivered efficient, scalable solutions aligned with project goals.",
                     },
+                    {
+                      title: "Junior AI Developer at CyberGen",
+                      duration: "2025 - 2026",
+                      text: "Developed intelligent chatbots using RAG (Retrieval-Augmented Generation) and agentic AI workflows, enabling accurate real-time responses. Integrated document search, embeddings, and automation tools to improve user experience and decision-making.",
+                    },
                   ].map((item, index) => (
                     <div
                       className="st-resume-timeline max-sm:!mb-[14px]"

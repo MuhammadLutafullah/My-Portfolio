@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,51 +8,56 @@ const ContactSection = () => {
     phone: "",
     message: "",
   });
-
   const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState({ type: '', message: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    // Clear status when user starts typing
+    setStatus({ type: '', message: '' });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSending(true);
+    setStatus({ type: '', message: '' });
 
-    console.log("Form Data:", formData); // Debugging
-
-    // Update emailjs to include the new fields
-    emailjs
-      .send(
-        "service_i21yhf3", // Replace with your Service ID
-        "template_8drbwsk", // Replace with your Template ID
-        {
-          ...formData,
-          name: `${formData.firstName} ${formData.lastName}`, // Combine first and last name for compatibility
+    try {
+      // Updated URL for local development
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        "Vj-41okr5iEf2JbN5" // Replace with your public key
-      )
-      .then(
-        (response) => {
-          console.log("EmailJS Response:", response); // Debugging
-          alert("Message sent successfully!");
-          setFormData({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phone: "",
-            message: "",
-          });
-        },
-        (error) => {
-          console.error("EmailJS Error:", error); // Debugging
-          alert("Failed to send message. Please try again later.");
-        }
-      )
-      .finally(() => {
-        setIsSending(false);
+        body: JSON.stringify(formData),
       });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({ type: 'success', message: 'Message sent successfully!' });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        throw new Error(data.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      // Better error message for connection issues
+      if (error.message === 'Failed to fetch') {
+        setStatus({ type: 'error', message: 'Cannot connect to server. Please make sure the API is running on port 5000.' });
+      } else {
+        setStatus({ type: 'error', message: error.message || 'Failed to send message. Please try again later.' });
+      }
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -69,11 +73,18 @@ const ContactSection = () => {
               I'll connect with you. Thank you for reaching out!
             </p>
           </div>
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-4 max-w-[770px] mx-auto"
-          >
-            {/* First row: First Name, Last Name, Phone */}
+          
+          {/* Status Message */}
+          {status.message && (
+            <div className={`mb-4 p-3 rounded ${
+              status.type === 'success' ? 'bg-green-500' : 'bg-red-500'
+            } text-white`}>
+              {status.message}
+            </div>
+          )}
+          
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-[770px] mx-auto">
+            {/* Your existing form fields */}
             <div className="flex max-sm:flex-col flex-row gap-4 justify-center items-center">
               <input
                 type="text"
@@ -106,17 +117,15 @@ const ContactSection = () => {
                 required
               />
               <input
-                type="text"
+                type="tel"
                 name="phone"
                 placeholder="Phone"
                 value={formData.phone}
                 onChange={handleChange}
                 className="max-sm:w-full flex-1 w-[250px] font-medium text-[18px] leading-[30px] px-[24px] py-[10px] border border-[#777777] rounded-[8px] bg-white text-black outline-none"
-                required
               />
             </div>
 
-            {/* Third row: Message */}
             <div className="flex max-sm:flex-col flex-row gap-4 justify-center items-center">
               <textarea
                 name="message"
@@ -129,12 +138,11 @@ const ContactSection = () => {
               />
             </div>
 
-            {/* Fourth row: Submit Button */}
             <div className="flex justify-center mt-2">
               <button
                 type="submit"
                 disabled={isSending}
-                className="w-full max-w-[250px] cursor-pointer rounded-[8px] bg-transparent border border-[#ffffff] text-white font-medium text-[18px] leading-[30px] px-[24px] py-[10px]"
+                className="w-full max-w-[250px] cursor-pointer rounded-[8px] bg-transparent border border-[#ffffff] text-white font-medium text-[18px] leading-[30px] px-[24px] py-[10px] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <p className="btn-default-txt">
                   {isSending ? "Sending..." : "Send"}
