@@ -13,7 +13,7 @@ const Hero = () => {
               Hello, I'm Muhammad Lutaf Ullah,{" "}
               <Typewriter
                 options={{
-                  strings: ["Frontend Developer", "React Developer"],
+                  strings: ["Frontend Developer","Junior AI Developer","React Developer",],
                   autoStart: true,
                   loop: true,
                   deleteSpeed: 50,
