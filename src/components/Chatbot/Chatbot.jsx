@@ -108,6 +108,10 @@ const Chatbot = () => {
                       window.location.hostname === '127.0.0.1';
       
       let response;
+      console.log('Environment Check:');
+console.log('VITE_OPENROUTER_API_KEY exists?', !!import.meta.env.VITE_OPENROUTER_API_KEY);
+console.log('All env vars:', import.meta.env);
+console.log('Mode:', import.meta.env.MODE);
       
       if (isLocal) {
         // LOCAL MODE
