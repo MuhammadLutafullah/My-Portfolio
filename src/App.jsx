@@ -11,6 +11,7 @@ import Projects from "./components/Projects/Projects";
 import Resume from "./components/Resume/Resume";
 import Slider360 from "./components/Slider360/Slider360";
 import StackSlider from "./components/StackSlider/StackSlider";
+import Chatbot from "./components/Chatbot/Chatbot";
 // ... other imports
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         onContactClick={() => scrollToSection(contactRef)}
         onWhyClick={() => scrollToSection(whyRef)}
       />
+      <Chatbot/>
       <div ref={homeRef} id="home">
         <Hero />
       </div>
