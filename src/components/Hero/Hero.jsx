@@ -1,7 +1,7 @@
 import "../../App.css";
 import Tilt from "react-parallax-tilt";
 import Typewriter from "typewriter-effect";
-import heroImg from "../../images/updated-img.png";
+import profileImg from "../../images/Profile-img.jpeg";
 
 const Hero = () => {
   return (
@@ -11,29 +11,29 @@ const Hero = () => {
           <div className="hero-content max-w-[647px] max-sm:max-w-full max-sm:text-center">
             <p className="hero-heading font-bold font-normal text-[56px] leading-[66px] max-md:text-[37px] max-md:leading-[41px] max-xxsm:!text-[27px] max-xxsm:!leading-[31px]">
               Hello, I'm Muhammad Lutaf Ullah,{" "}
-              <Typewriter
-                options={{
-                  strings: ["Frontend Developer","Junior AI Developer","React Developer",],
-                  autoStart: true,
-                  loop: true,
-                  deleteSpeed: 50,
-                }}
-              />
+             <Typewriter
+  options={{
+    strings: ["AI & Frontend Developer", "React Developer", "RAG Chatbot Specialist", "Full Stack (FastAPI + React)"],
+    autoStart: true,
+    loop: true,
+    deleteSpeed: 50,
+  }}
+/>
             </p>
 
-            <p className="parallex-desc py-[27px] max-md:py-[15px] font-medium font-normal text-[18px] leading-[27px] text-[#555555] max-xxsm:text-[16px]">
-              I use parallax animation on my hero image and specialize in
-              turning ideas into reality. With 4 years of pure experience as a
-              frontend developer, I am skilled in customizing and editing
-              Next.js and React libraries to create pixel-perfect, fully
-              responsive websites. My past projects showcase seamless
-              adaptability and exceptional performance across all devices.
-            </p>
+           <p className="parallex-desc py-[27px] max-md:py-[15px] font-medium font-normal text-[18px] leading-[27px] text-[#555555] max-xxsm:text-[16px]">
+  Currently working as a Junior AI Developer specializing in RAG-based chatbots, embeddings, and data insights. 
+  With 2 years of experience in frontend development (React, Next.js) and 1 year of hands-on experience in AI/ML, 
+  I bridge the gap between intelligent backend systems and modern frontend interfaces. 
+  On the backend, I work with Python (FastAPI) along with SQL and NoSQL databases (MongoDB, Supabase) to build 
+  scalable, full-stack AI applications. I specialize in turning complex ideas into production-ready solutions 
+  that deliver real business value.
+</p>
             <div className="action-otr flex max-sm:justify-center">
               <a
-                href="https://drive.google.com/file/d/1-Ud0CoSuL7dFmUN2oGKx7NolL88pjb7y/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1TTCgdoVrirKwfJAS9hE7QVRmW4Bivv5k/view?usp=drivesdk"
                 target="_blank"
-                className="action-inr h-[50px] overflow-hidden  cursor-pointer text-[18px] max-xxsm:text-[15px] font-medium font-normal leading-[30px] text-white py-[10px] px-[24px] rounded-[8px] bg-slate-950"
+                className="action-inr h-[50px] overflow-hidden cursor-pointer text-[18px] max-xxsm:text-[15px] font-medium font-normal leading-[30px] text-white py-[10px] px-[24px] rounded-[8px] bg-slate-950"
               >
                 <p className="btn-default-txt">Download CV</p>
                 <p className="pt-[11px] btn-hover-txt">One Click Away</p>
@@ -53,13 +53,12 @@ const Hero = () => {
             glarePosition="bottom"
             gyroscope={true}
           >
-            <div className="hero-img bg-black rounded-full overflow-hidden w-[550px] h-[550px] max-md:w-[421px] max-md:h-[421px] max-sm:!w-[200px] max-sm:!h-[200px] flex justify-center items-center">
-              <img
-                className="max-md:w-full max-md:h-full object-contain w-[500px]  h-[500px]"
-                src={heroImg}
-                alt="dev-img"
-              />
-            </div>
+            <img
+              src={profileImg}
+              alt="Muhammad Lutaf Ullah"
+              className="hero-img bg-black rounded-full w-[550px] h-[550px] max-md:w-[421px] max-md:h-[421px] max-sm:!w-[200px] max-sm:!h-[200px] object-cover"
+              style={{ objectPosition: "center 25%" }}
+            />
           </Tilt>
         </div>
       </div>

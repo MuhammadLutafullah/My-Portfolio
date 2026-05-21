@@ -9,6 +9,13 @@ import jqueryImg from "../../images/jquery-svgrepo-com.svg";
 import ReactImg from "../../images/react-svgrepo-com.svg";
 import muiImg from "../../images/material-ui-svgrepo-com.svg";
 import sassImg from "../../images/sass-svgrepo-com.svg";
+
+// AI & Backend Icons
+import mongodbImg from "../../images/mongodb-svgrepo-com.svg";
+import fastapiImg from "../../images/fastapi-svgrepo-com.svg";
+import huggingfaceImg from "../../images/hugging-face-svgrepo-com.svg";
+import pythonImg from "../../images/python.svg";
+
 // Import Swiper styles
 import "swiper/css";
 
@@ -17,15 +24,27 @@ import { Autoplay } from "swiper/modules";
 
 const StackSlider = () => {
   const images = [
+    // Shuffled Icons - Frontend + AI Mixed
     htmlImg,
+    pythonImg,
     cssImg,
-    bootstrapImg,
+    fastapiImg,
     tailwindImg,
+    mongodbImg,
     javascriptImg,
-    jqueryImg,
+    huggingfaceImg,
     ReactImg,
+    bootstrapImg,
+    jqueryImg,
     muiImg,
     sassImg,
+    pythonImg,
+    htmlImg,
+    fastapiImg,
+    ReactImg,
+    mongodbImg,
+    tailwindImg,
+    huggingfaceImg,
   ];
 
   return (

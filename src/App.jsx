@@ -44,9 +44,9 @@ function App() {
       <div ref={aboutRef} id="about">
         <Resume />
       </div>
-      <div ref={whyRef} id="why">
+      {/* <div ref={whyRef} id="why">
         <Slider360 />
-      </div>
+      </div> */}
 
       <div ref={portfolioRef} id="portfolio">
         <Projects />
