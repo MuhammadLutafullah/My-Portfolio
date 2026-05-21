@@ -31,7 +31,7 @@ const Hero = () => {
 </p>
             <div className="action-otr flex max-sm:justify-center">
               <a
-                href="https://drive.google.com/file/d/1TTCgdoVrirKwfJAS9hE7QVRmW4Bivv5k/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1WHSEGxdRIY1Pwhl9YmjxClijfKmNRtJX/view?usp=drivesdk"
                 target="_blank"
                 className="action-inr h-[50px] overflow-hidden cursor-pointer text-[18px] max-xxsm:text-[15px] font-medium font-normal leading-[30px] text-white py-[10px] px-[24px] rounded-[8px] bg-slate-950"
               >
