@@ -5,7 +5,7 @@ export default async function handler(req, res) {
 
   const { message, cvData } = req.body;
 
-  const apiKey = process.env.OPENROUTER_API_KEY;
+  const apiKey = process.env.VITE_OPENROUTER_API_KEY;
 
   if (!apiKey) {
     return res.status(500).json({ error: 'API key not configured' });
